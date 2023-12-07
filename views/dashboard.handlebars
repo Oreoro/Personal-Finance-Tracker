@@ -1,0 +1,91 @@
+<link rel="stylesheet" type="text/css" href="/public/css/dashboard.css">
+<script src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="/public/charts/chartsDashboard.js"></script>
+<script>
+  google.charts.load('current', { packages: ['corechart'] });
+  google.charts.setOnLoadCallback(drawCharts);
+</script>
+
+<div class="navbar">
+  <div class="dropdown">
+    <button class="dropdown-btn">Menu</button>
+    <div class="dropdown-content">
+      <a href="/transactions/new">Add a new Transaction</a>
+      <a href="/transactions/seeAllTransaction">View All Transactions</a>
+      <a href="/budget/new">Add a new Budget</a>
+      <a href="/settings/profile/">Settings</a>
+      <a href="/logout">Logout</a>`
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropdown-btn">Charts</button>
+    <div class="dropdown-content">
+      <a href="/charts/getCharts">View Detailed Charts</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropdown-btn">Goals</button>
+    <div class="dropdown-content">
+      <a href="/goals/viewgoals">Set a Goal</a>
+      <a href="/goals/viewall">View Existing Goals</a>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<h2>Current Budgets </h2>
+<table>
+  <thead>
+    <tr>
+      <th>Start Date</th>
+      <th>End Date</th>
+      <th>Category</th>
+      <th>Amount Set (in {{data.symbol}})</th>
+      <th>Amount Remaining (in {{data.symbol}})</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each active_budget}}
+    <tr>
+      <td>{{start_date}}</td>
+      <td>{{end_date}}</td>
+      <td>{{category}}</td>
+      <td>{{budget_amount}}</td>
+      <td>{{amount_remaining}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+<h2> Recent Transaction history</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Description</th>
+      <th>Category</th>
+      <th>Amount in {{data.symbol}}</th>
+      <th>Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each transactions}}
+    <tr>
+      <td>{{transaction_date}}</td>
+      <td>{{description}}</td>
+      <td>{{category}}</td>
+      <td>{{amount}}</td>
+      <td>{{paymentType}}</td>
+
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>

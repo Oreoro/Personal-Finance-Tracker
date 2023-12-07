@@ -1,0 +1,61 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #F3F7F7; /* Isabelline */
+  color: #263D42;
+  margin: 0;
+  padding: 20px;
+  line-height: 1.5;
+}
+  
+h1, h2 {
+  text-align: center;
+  color: #020508;
+  padding: 20px;
+}
+
+
+ 
+.button{
+  background-color: #F9F8F4; /* Isabelline */
+  color:  #1b1c1c; /* Smokey Topaz */
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+
+
+.centered > form {
+  margin-bottom: 30px; /* More margin-bottom for increased whitespace */
+}
+
+
+input[type="date"] {
+  padding: 10px;
+  border: 1px solid #1b1c1c; /* Dark grey border color */
+  border-radius: 5px; /* Rounded corners for modern look */
+ 
+}
+button[type="submit"] {
+  padding: 10px;
+  border: 1px solid #1b1c1c; /* Dark grey border color */
+  border-radius: 5px; /* Rounded corners for modern look */
+  background-color: #020508;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+
+
+label {
+  font-size: 16px;
+  color: #1b1c1c; /* Dark grey color */
+  margin-right: 10px;
+}
+
+
+form {
+  text-align: center;
+  margin-bottom: 20px;
+}

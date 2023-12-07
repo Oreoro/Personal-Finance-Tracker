@@ -1,0 +1,56 @@
+<h1>All Goals</h1>
+
+<link rel="stylesheet" type="text/css" href="/public/css/dashboard.css">
+<link rel="stylesheet" type="text/css" href="/public/css/goals.css">
+{{#if error}}
+<div class="error">
+    {{error}}
+</div>
+{{/if}}
+
+<div id="error-message" style="display:none;">
+    {{#each errors}}
+        <p>{{this}}</p>
+    {{/each}}
+</div>
+
+<h2>Current Goals Set</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Goal Name</th>
+      <th>Target Date</th>
+      <th>Goal Amount</th>
+      <th>Minimum Amount to save every month</th>
+      <th>Total Savings recorded till now</th>
+       <th>Config</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each data}}
+    <tr class="goal-entry">
+      <td>{{goal_name}}</td>
+      <td>{{target_date}}</td>
+      <td>{{goal_amount}}</td>
+      <td>{{monthlySavings}}</td>
+      <td>{{savings}}</td>
+      <td>
+        <button type="submit1" onclick="window.location.href='/goals/new'">Add</button>
+        <button type="submit" data-goal-id="{{_id}}">Delete</button>
+      </td>
+    </tr>
+    {{/each}}
+
+  </tbody>
+</table>
+
+<button onclick="window.location.href='/dashboard'">Back to Dashboard</button>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+{{!-- <script src="/public/js/deleteGoal.js"></script> --}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+{{!-- <script src='/public/validations/allGoals.js'></script> --}}
+<script src="/public/js/deleteGoal.js"></script>
+

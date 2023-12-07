@@ -1,0 +1,22 @@
+<link rel="stylesheet" type="text/css" href="/public/css/log_in.css">
+
+
+<h1 class="page_title">Personal Finance Tracker </h1>
+<h2 class="page_desc">Track Your Expenses</h2>
+<div class="container">
+    <h1>Login</h1>
+    <form id="login-form" action="/login" method="POST">
+        <label for="username">Email</label>
+        <input id="username" name="username" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Log In</button>
+        <button type="submit" onclick="window.location.href='/registration'">Register</button>
+    </form>
+</div>
+
+<div id="error-container-login">{{error}}</div>
+<script src='/public/validations/log_in_registration.js'></script>
+<script src='/public/js/log_in.js'></script>
+
+</div>

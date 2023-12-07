@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="/public/css/charts.css">
+<script src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="/public/charts/charts.js"></script>
+<script>
+  google.charts.load('current', {packages: ['corechart']});
+  google.charts.setOnLoadCallback(drawCharts);
+</script>
+
+<div class="centered">
+  <form action="/charts/getCharts" method="get">
+    <label for="startDate">Start Date:</label>
+    <input type="date" id="startDate" name="startDate" value="{{startDate}}" required>
+    <label for="endDate">End Date:</label>
+    <input type="date" id="endDate" name="endDate" value="{{endDate}}" required>
+    <button type="submit">Update Charts</button>
+  </form>
+</div>
+
+<div id="transactions-data" style="display:none;">{{json transactions1}}</div>
+
+{{#if transactions1}}
+<div class="chart-container">
+  <div id="piechart" class="chart"></div>
+  <div id="linechart" class="chart"></div>
+  <div id="barchart" class="chart"></div>
+  <div id="stackedColumnChart" class="chart"></div>
+</div>
+{{else}}
+  <div id="error-message">
+    <h2>Error: No transaction data available</h2>
+    <p>Please make sure you have transaction data between the selected dates.</p>
+  </div>
+{{/if}}

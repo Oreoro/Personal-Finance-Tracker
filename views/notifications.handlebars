@@ -1,0 +1,14 @@
+<link rel="stylesheet" type="text/css" href="/public/css/notifications.css">
+<h1>Here are all your notifications</h1>
+{{#if notifications}}
+{{#each notifications}}
+<div class="notification">
+    {{!-- <span class="notification-number">{{@index}}</span> --}}
+    <span class="notification-message">{{this}}</span>
+</div>
+{{/each}}
+{{else}}
+<p>No notifications to show</p>
+{{/if}}
+
+<button onclick="window.location.href='/dashboard'">Back to Dashboard</button>

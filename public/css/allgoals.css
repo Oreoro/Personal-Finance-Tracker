@@ -1,0 +1,54 @@
+/* Center align the title */
+h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* Style the table headers */
+th {
+  text-align: left;
+  font-weight: bold;
+  padding: 10px 5px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+}
+
+/* Style the table cells */
+td {
+  padding: 10px 5px;
+  border: 1px solid #ddd;
+}
+
+/* Style the table rows */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Style the table */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Style the button */
+button {
+  display: block;
+  background-color: #1b1c1c;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.alert{
+  font-weight:bolder;
+  color: #1b1c1c;
+}
+/* Style the button hover effect */
